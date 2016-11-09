@@ -1,3 +1,6 @@
+//Cody Selby, Nathaniel Davidson, Matthew Dias, Cameron Williams, Kok (ken) Siew
+//Bryan Tham
+
 #ifndef CSCOREBOARD_H
 #define CSCOREBOARD_H
 

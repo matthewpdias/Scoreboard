@@ -1,3 +1,5 @@
+//Cody Selby, Nathaniel Davidson, Matthew Dias, Cameron Williams, Kok (ken) Siew
+//Bryan Tham
 #include <iostream>
 #include <assert.h>
 #include "CScoreboard.h"
