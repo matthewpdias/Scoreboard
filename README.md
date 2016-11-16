@@ -6,4 +6,8 @@
     flexibility and gives us direct association between team number and score.  
   
 ##Design Pattern:
-  - For our design pattern we went with a C++ interface using abstract classes.
+  - For our design pattern we went with a facade design pattern. Our class  
+    'CScoreboard' is inherited from 'IScoreboard.'
+  - We went with a facade design pattern because the class IScoreboard that  
+    was provided to us is a abstract class. So we had no choice but to inherit  
+    it.
