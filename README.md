@@ -8,6 +8,4 @@
 ##Design Pattern:
   - For our design pattern we went with a facade design pattern. Our class  
     'CScoreboard' is inherited from 'IScoreboard.'
-  - We went with a facade design pattern because the class IScoreboard that  
-    was provided to us is a abstract class. So we had no choice but to inherit  
-    it.
+  - We went with a adapter design pattern because we repurposed c++ vectors and c++ maps to 'adapt' to our use case.
