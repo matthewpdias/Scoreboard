@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-G = g++
-GFLAGS = -g -std=c++11 -Wall -W -Werror -pedantic
-
-scoreboard: CScoreboard.o main.o
-	$(G) $(GFLAGS) main.o CScoreboard.o -o scoreboard
-
-main.o: main.cpp CScoreboard.h IScoreboard.h
-
-CScoreboard.o: CScoreboard.cpp IScoreboard.h CScoreboard.h
-
-clean:
-	rm -f *.o scoreboard
-=======
 # Points to the root of Google Test. Change it to reflect where your
 # clone of the googletest repo is
-GTEST_DIR = /usr/local/include/gtest
+GTEST_DIR = /usr/local/include/googletest/googletest
 
 # Flags passed to the preprocessor and compiler
 CPPFLAGS += -std=c++11 --coverage -isystem $(GTEST_DIR)/include
@@ -61,4 +47,3 @@ ScoreboardTest.o : ScoreboardTest.cpp \
 
 ScoreboardTest : Scoreboard.o ScoreboardTest.o gtest_main.a
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -lpthread $^ -o $@
->>>>>>> 37eda69e6e443231e70880c0bd73dc3bdffcc23e

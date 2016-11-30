@@ -1,3 +1,10 @@
+Matthew Dias
+Cody Selby
+Ken Siew
+Bryan Tham
+Nathan Davidson
+Cameron Williams
+
 ##How it was designed:  
   - We thought about how to store all the information  
   - Compared and contrasted ideas for data structures  

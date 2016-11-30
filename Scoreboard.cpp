@@ -2,11 +2,13 @@
 //Bryan Tham
 #include <iostream>
 #include <assert.h>
-#include "CScoreboard.h"
+#include "Scoreboard.h"
+#include "ObserverPattern.hpp"
+#include <climits>
 
 using namespace std;
 
-CScoreboard::CScoreboard(int comp, int periods){
+Scoreboard::Scoreboard(int comp, int periods){
   assert(comp > 1);
   assert(periods > 0);
   //for all of the periods
@@ -25,21 +27,22 @@ CScoreboard::CScoreboard(int comp, int periods){
 
 }
 
-void CScoreboard::setScore(int competitors, int period , int score){
+void Scoreboard::setScore(int competitors, int period , int score){
   scores[period-1][competitors] = score;
+  notifyObservers();
 }
 
-int CScoreboard::getScore(int competitors, int period){
+int Scoreboard::getScore(int competitors, int period){
 
   if( competitors  > this->competitors || competitors < 1){
-    cout << "Competitor does not exists" << endl;
-    return 0;
+    cout << "Competitor does not exist" << endl;
+    return INT_MIN;
   }
 
   return scores[period-1][competitors];
 }
 
-int CScoreboard::getTotalScore(int competitors){
+int Scoreboard::getTotalScore(int competitors){
 
   if( competitors  > this->competitors || competitors < 1){
     cout << "Competitor does not exists" << endl;
@@ -53,10 +56,11 @@ int CScoreboard::getTotalScore(int competitors){
   return Escore;
 }
 
-void CScoreboard::clearScoreboard(){
+void Scoreboard::clearScoreboard(){
   for(int i = 1; i <= competitors; i++){
     for(int j = 1; j <= scores.size(); j++){
       setScore(i, j, 0);
     }
   }
+  notifyObservers();
 }
